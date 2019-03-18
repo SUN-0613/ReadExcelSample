@@ -36,6 +36,11 @@ namespace ReadExcelSample.Form.Model
         /// 親List:行情報
         /// 子List:列情報
         /// </returns>
+        /// <remarks>
+        /// Copyright(c) 2016 ClosedXML
+        /// Released under the MIT license
+        /// https://github.com/ClosedXML/ClosedXML/blob/master/LICENSE
+        /// </remarks>
         public List<List<string>> ReadXlsx(string filePath)
         {
 
