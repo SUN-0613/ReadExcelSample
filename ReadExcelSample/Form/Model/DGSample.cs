@@ -44,25 +44,29 @@ namespace ReadExcelSample.Form.Model
         public List<List<string>> ReadExcel(string filePath)
         {
 
-            var workbook = new XLWorkbook(filePath);
-            var worksheet = workbook.Worksheet(1);
-            var lastRow = worksheet.LastRowUsed().RowNumber();
-            int lastColumn = worksheet.LastColumnUsed().ColumnNumber();
-            var returnValues = new List<List<string>>();
-
-            for (int iLoop = 1; iLoop <= lastRow; iLoop++)
+            using (var workbook = new XLWorkbook(filePath))
             {
 
-                returnValues.Add(new List<string>());
+                var worksheet = workbook.Worksheet(1);
+                var lastRow = worksheet.LastRowUsed().RowNumber();
+                int lastColumn = worksheet.LastColumnUsed().ColumnNumber();
+                var returnValues = new List<List<string>>();
 
-                for (int jLoop = 1; jLoop <= lastColumn; jLoop++)
+                for (int iLoop = 1; iLoop <= lastRow; iLoop++)
                 {
-                    returnValues[iLoop - 1].Add(worksheet.Cell(iLoop, jLoop).Value.ToString());
+
+                    returnValues.Add(new List<string>());
+
+                    for (int jLoop = 1; jLoop <= lastColumn; jLoop++)
+                    {
+                        returnValues[iLoop - 1].Add(worksheet.Cell(iLoop, jLoop).Value.ToString());
+                    }
+
                 }
 
-            }
+                return returnValues;
 
-            return returnValues;
+            }
 
         }
 
