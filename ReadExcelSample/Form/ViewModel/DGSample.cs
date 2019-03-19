@@ -51,7 +51,7 @@ namespace ReadExcelSample.Form.ViewModel
                 }
 
                 // xlsx読込、DataGridへ表示
-                var values = _Model.ReadXlsx(_ExcelPath);
+                var values = _Model.ReadExcel(_ExcelPath);
                 for (int iLoop = 0; iLoop < values.Count; iLoop++)
                 {
                     

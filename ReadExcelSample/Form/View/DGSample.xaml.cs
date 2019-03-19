@@ -64,7 +64,7 @@ namespace ReadExcelSample.Form.View
                 foreach (string file in files)
                 {
 
-                    if (file.ToUpper().Contains(".XLSX"))
+                    if (file.ToUpper().Contains(".XLSX") || file.ToUpper().Contains(".XLSM"))
                     {
                         _ViewModel.ExcelPath = file;
                         isOK = true;

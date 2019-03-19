@@ -41,7 +41,7 @@ namespace ReadExcelSample.Form.Model
         /// Released under the MIT license
         /// https://github.com/ClosedXML/ClosedXML/blob/master/LICENSE
         /// </remarks>
-        public List<List<string>> ReadXlsx(string filePath)
+        public List<List<string>> ReadExcel(string filePath)
         {
 
             var workbook = new XLWorkbook(filePath);
