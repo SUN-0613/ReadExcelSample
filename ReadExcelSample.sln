@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadExcelSample", "ReadExcelSample\ReadExcelSample.csproj", "{49EEFEDD-25AD-43FA-8280-C1217B452971}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "E:\_Job\GitHub\Common\Common\Common.csproj", "{326C56D4-4067-435F-B7B0-A93B167C2186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common\Common.csproj", "{326C56D4-4067-435F-B7B0-A93B167C2186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
